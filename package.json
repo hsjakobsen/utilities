@@ -1,0 +1,19 @@
+{
+  "name": "@hsjakobsen/utilities",
+  "version": "1.0.1",
+  "description": "A bunch of utility functions that I use across various projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hsjakobsen/utilities.git"
+  },
+  "author": "hsjakobsen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hsjakobsen/utilities/issues"
+  },
+  "homepage": "https://github.com/hsjakobsen/utilities#readme"
+}
