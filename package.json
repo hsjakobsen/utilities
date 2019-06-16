@@ -1,6 +1,6 @@
 {
   "name": "@hsjakobsen/utilities",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "A bunch of utility functions that I use across various projects",
   "main": "index.js",
   "scripts": {
