@@ -8,5 +8,5 @@ function printMsg() {
 module.exports = {
   getBrowserInfo: getBrowserInfo,
   printMsg: printMsg,
-  numbers: {...numbers},
+  numbers: numbers,
 };
