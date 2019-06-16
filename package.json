@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/hsjakobsen/utilities/issues"
   },
-  "homepage": "https://github.com/hsjakobsen/utilities#readme"
+  "homepage": "https://github.com/hsjakobsen/utilities#readme",
+  "dependencies": {
+    "email-validator": "^2.0.4"
+  }
 }

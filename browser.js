@@ -1,4 +1,4 @@
-function getBrowserInfo(){
+export function getBrowserInfo(){
     var ua=navigator.userAgent,tem,M=ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || []; 
     if(/trident/i.test(M[1])){
         tem=/\brv[ :]+(\d+)/g.exec(ua) || []; 
@@ -15,5 +15,3 @@ function getBrowserInfo(){
         version: M[1]
     };
 }
-
-module.exports = getBrowserInfo;
