@@ -1,5 +1,5 @@
-export const asyncForEach = async (array:object[], callback:Function) => {
+export const asyncForEach = async (array:any[], callback: (item:object) => void) => {
   for (let index = 0; index < array.length; index++) {
-    await callback(array[index], index, array);
+    await callback(array[index]);
   }
 }
