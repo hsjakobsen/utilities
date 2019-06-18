@@ -12,8 +12,8 @@ export function getBrowserInfo(userAgent:string, appName:string, appVersion:stri
     }
   }
   M = M[2] ? [M[1], M[2]] : [appName, appVersion, '-?'];
-  tem = userAgent.match(/version\/(\d+)/i))
-  if ((tem != null) {
+  tem = userAgent.match(/version\/(\d+)/i);
+  if (tem != null) {
     M.splice(1, 1, tem[1]);
   }
   return {

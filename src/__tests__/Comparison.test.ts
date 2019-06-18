@@ -5,9 +5,9 @@ test('Compare strings 1', () => {
 });
 
 test('Compare strings 2', () => {
-    expect(compareStrings('carl', 'Carl')).toBe(1);
-  });
-  
+  expect(compareStrings('carl', 'Carl')).toBe(1);
+});
+
 test('Compare strings 3', () => {
-    expect(compareStrings('Flow', 'flow')).toBe(-1);
+  expect(compareStrings('Flow', 'flow')).toBe(-1);
 });

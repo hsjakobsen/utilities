@@ -1,14 +1,20 @@
-import * as validator from "email-validator";
+import * as validator from 'email-validator';
 
 import { formatError } from './responses';
 
-export const validateEmail = (email:string) => validator.validate(email);
+export const validateEmail = (email: string) => validator.validate(email);
 
-export function trimStringAndCheckLength(stringToCheck:string, field:string, lengthRequirement:number, matchLength:boolean) {
+export function trimStringAndCheckLength(
+  stringToCheck: string,
+  field: string,
+  lengthRequirement: number,
+  matchLength: boolean,
+) {
   const trimmedString = stringToCheck.trim();
   let response;
 
-  const matchesRequirement = matchLength === true ? trimmedString.length !== lengthRequirement : trimmedString.length < lengthRequirement;
+  const matchesRequirement =
+    matchLength === true ? trimmedString.length !== lengthRequirement : trimmedString.length < lengthRequirement;
   const feedback = matchLength === true ? ' ' : ' at least ';
 
   if (matchesRequirement) {
@@ -27,7 +33,7 @@ export function trimStringAndCheckLength(stringToCheck:string, field:string, len
   return response;
 }
 
-export function verifyLoginCredentials(username:string, password:string) {
+export function verifyLoginCredentials(username: string, password: string) {
   if (!username || username === '') {
     return formatError('Username cannot be empty');
   }
@@ -35,5 +41,5 @@ export function verifyLoginCredentials(username:string, password:string) {
     return formatError('Password cannot be empty');
   }
 
-  return {password, username};
+  return { password, username };
 }

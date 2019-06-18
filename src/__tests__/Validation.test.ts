@@ -5,27 +5,27 @@ test('Validate email 1', () => {
 });
 
 test('Validate email 2', () => {
-    expect(validateEmail("badmail@")).toBe(false);
-})
+  expect(validateEmail('badmail@')).toBe(false);
+});
 
 test('trimStringAndCheckLength', () => {
-  expect(trimStringAndCheckLength(" My little pony ", "Name", 3, false)).toEqual({
-    "success": true,
-    "result": "My little pony",
-    "feedback": ""      
+  expect(trimStringAndCheckLength(' My little pony ', 'Name', 3, false)).toEqual({
+    success: true,
+    result: 'My little pony',
+    feedback: '',
   });
 });
 
 test('verifyLoginCredentials', () => {
-  expect(verifyLoginCredentials("", "test")).toEqual({
-    "success": false,
-    "message": "Username cannot be empty"    
+  expect(verifyLoginCredentials('', 'test')).toEqual({
+    success: false,
+    message: 'Username cannot be empty',
   });
 });
 
 test('verifyLoginCredentials', () => {
-  expect(verifyLoginCredentials("test", "test")).toEqual({
-    "username": "test",
-    "password": "test"    
+  expect(verifyLoginCredentials('test', 'test')).toEqual({
+    username: 'test',
+    password: 'test',
   });
 });
