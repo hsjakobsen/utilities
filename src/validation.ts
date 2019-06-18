@@ -5,24 +5,23 @@ import { formatError } from './responses';
 export const validateEmail = (email:string) => validator.validate(email);
 
 export function trimStringAndCheckLength(stringToCheck:string, field:string, lengthRequirement:number, matchLength:boolean) {
-  var trimmedString = stringToCheck.trim();
+  const trimmedString = stringToCheck.trim();
   let response;
 
-  var matchesRequirement =
-    matchLength === true ? trimmedString.length != lengthRequirement : trimmedString.length < lengthRequirement;
-  var feedback = matchLength === true ? ' ' : ' at least ';
+  const matchesRequirement = matchLength === true ? trimmedString.length !== lengthRequirement : trimmedString.length < lengthRequirement;
+  const feedback = matchLength === true ? ' ' : ' at least ';
 
   if (matchesRequirement) {
     response = {
-      success: false,
-      result: trimmedString,
       feedback: field + ' must be' + feedback + lengthRequirement + ' characters.',
+      result: trimmedString,
+      success: false,
     };
   } else {
     response = {
-      success: true,
-      result: trimmedString,
       feedback: '',
+      result: trimmedString,
+      success: true,
     };
   }
   return response;
@@ -36,8 +35,5 @@ export function verifyLoginCredentials(username:string, password:string) {
     return formatError('Password cannot be empty');
   }
 
-  return {
-    username: username,
-    password: password,
-  };
+  return {password, username};
 }
