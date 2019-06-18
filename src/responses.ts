@@ -1,4 +1,4 @@
-export function formatResponse(response) {
+export function formatResponse(response:any) {
   return {
     success: response.data.success,
     message: response.data.message,
@@ -6,7 +6,7 @@ export function formatResponse(response) {
   };
 }
 
-export function formatError(error) {
+export function formatError(error:any) {
   return {
     success: false,
     message: error,

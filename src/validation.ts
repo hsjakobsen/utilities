@@ -1,4 +1,10 @@
-export async function trimStringAndCheckLength(stringToCheck, field, lengthRequirement, matchLength) {
+import * as validator from "email-validator";
+
+import { formatError } from './responses';
+
+export const validateEmail = (email:string) => validator.validate(email);
+
+export function trimStringAndCheckLength(stringToCheck:string, field:string, lengthRequirement:number, matchLength:boolean) {
   var trimmedString = stringToCheck.trim();
   let response;
 
@@ -10,7 +16,7 @@ export async function trimStringAndCheckLength(stringToCheck, field, lengthRequi
     response = {
       success: false,
       result: trimmedString,
-      feedback: field + ' must be' + feedback + mininumLength + ' characters.',
+      feedback: field + ' must be' + feedback + lengthRequirement + ' characters.',
     };
   } else {
     response = {
@@ -22,12 +28,12 @@ export async function trimStringAndCheckLength(stringToCheck, field, lengthRequi
   return response;
 }
 
-export async function verifyLoginCredentials(username, password) {
+export function verifyLoginCredentials(username:string, password:string) {
   if (!username || username === '') {
-    return helpersResponse.handleServerError('Username cannot be empty');
+    return formatError('Username cannot be empty');
   }
   if (!password || password === '') {
-    return helpersResponse.handleServerError('Password cannot be empty');
+    return formatError('Password cannot be empty');
   }
 
   return {
