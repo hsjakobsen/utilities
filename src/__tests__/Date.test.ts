@@ -10,9 +10,10 @@ test('MonthAndDateFormatted Test 2', () => {
 });
 
 // TodayDateFormatted tests
-test('TodayDateFormatted Test 1', () => {
-  expect(getTodayDateFormatted()).toBe('18-06-2019');
-});
+// This test changes for every day
+// test('TodayDateFormatted Test 1', () => {
+//   expect(getTodayDateFormatted()).toBe('18-06-2019');
+// });
 
 // Timestamp tests
 test('TimeStamp Test 1', () => {
