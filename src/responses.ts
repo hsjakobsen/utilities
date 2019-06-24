@@ -1,8 +1,8 @@
-export function formatResponse(message:string, success:boolean, data:any, extraData:any) {
-  const response:IResponse = {
+export function formatResponse(message: string, success: boolean, data: any, extraData: any) {
+  const response: IResponse = {
     message,
-    success,   
-  }
+    success,
+  };
 
   if (data !== undefined) {
     response.data = data;
@@ -16,17 +16,17 @@ export function formatResponse(message:string, success:boolean, data:any, extraD
 }
 
 export function formatError(error: any) {
-  const response:IResponse = {
+  const response: IResponse = {
     message: error,
     success: false,
-  }
+  };
 
-  return response;  
+  return response;
 }
 
-export interface IResponse { 
-  data?:any, 
-  extraData?:any,
-  message:string, 
-  success:boolean, 
-} 
+export interface IResponse {
+  data?: any;
+  extraData?: any;
+  message: string;
+  success: boolean;
+}
