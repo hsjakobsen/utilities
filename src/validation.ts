@@ -41,5 +41,9 @@ export function verifyLoginCredentials(username: string, password: string) {
     return formatError('Password cannot be empty');
   }
 
-  return { password, username };
+  return { 
+    success: true, 
+    password, 
+    username 
+  };
 }
