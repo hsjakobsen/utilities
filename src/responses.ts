@@ -1,7 +1,7 @@
 export function formatResponse(message:string, success:boolean, data:any, extraData:any) {
-  var response:IResponse = {
-    message: message,
-    success: success,   
+  let response:IResponse = {
+    message,
+    success,   
   }
 
   if (data !== undefined) {
@@ -16,7 +16,7 @@ export function formatResponse(message:string, success:boolean, data:any, extraD
 }
 
 export function formatError(error: any) {
-  var response:IResponse = {
+  const response:IResponse = {
     message: error,
     success: false,
   }
