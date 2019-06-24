@@ -27,9 +27,9 @@ export const stringifyAndParse = (item: any) => utilsParse.stringifyAndParse(ite
 export const getBrowserInfo = (userAgent: string, appName: string, appVersion: string) =>
   utilsBrowser.getBrowserInfo(userAgent, appName, appVersion);
 
-export const formatResponse = (message:string, success:boolean, data?:any, extraData?:any) =>
+export const formatResponse = (message: string, success: boolean, data?: any, extraData?: any) =>
   utilsResponse.formatResponse(message, success, data, extraData);
-export const formatError = (error:string) => utilsResponse.formatError(error);
+export const formatError = (error: string) => utilsResponse.formatError(error);
 
 export const validateEmail = (email: string) => utilsValidation.validateEmail(email);
 export const trimStringAndCheckLength = (
