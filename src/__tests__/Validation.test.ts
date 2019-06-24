@@ -25,7 +25,8 @@ test('verifyLoginCredentials', () => {
 
 test('verifyLoginCredentials', () => {
   expect(verifyLoginCredentials('test', 'test')).toEqual({
-    username: 'test',
     password: 'test',
+    success: true,
+    username: 'test',
   });
 });
