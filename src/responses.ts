@@ -1,9 +1,9 @@
 export function formatResponse(message: string, success: boolean, data?: any, extraData?: any) {
   const response: IResponse = {
-    message,
-    success,
     data,
     extraData,
+    message,
+    success,
   };
 
   return response;
@@ -19,8 +19,8 @@ export function formatError(error: string) {
 }
 
 export interface IResponse {
-  data?: any;
-  extraData?: any;
   message: string;
   success: boolean;
+  data?: any;
+  extraData?: any;
 }
