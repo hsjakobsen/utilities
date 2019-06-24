@@ -19,8 +19,8 @@ export function formatError(error: string) {
 }
 
 export interface IResponse {
-  message: string;
-  success: boolean;
   data?: any;
   extraData?: any;
+  message: string;
+  success: boolean;
 }
