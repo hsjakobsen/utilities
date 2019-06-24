@@ -1,14 +1,32 @@
-export function formatResponse(response: any) {
-  return {
-    data: response.data.data,
-    message: response.data.message,
-    success: response.data.success,
-  };
+export function formatResponse(message:string, success:boolean, data:any, extraData:any) {
+  var response:IResponse = {
+    message: message,
+    success: success,   
+  }
+
+  if (data !== undefined) {
+    response.data = data;
+  }
+
+  if (extraData !== undefined) {
+    response.extraData = extraData;
+  }
+
+  return response;
 }
 
 export function formatError(error: any) {
-  return {
+  var response:IResponse = {
     message: error,
     success: false,
-  };
+  }
+
+  return response;  
 }
+
+export interface IResponse { 
+  data?:any, 
+  extraData?:any,
+  message:string, 
+  success:boolean, 
+} 
