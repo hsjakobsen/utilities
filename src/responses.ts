@@ -1,5 +1,5 @@
 export function formatResponse(message:string, success:boolean, data:any, extraData:any) {
-  let response:IResponse = {
+  const response:IResponse = {
     message,
     success,   
   }
