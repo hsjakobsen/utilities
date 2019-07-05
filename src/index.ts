@@ -32,7 +32,7 @@ export const formatResponse = (message: string, success: boolean, data?: any, ex
   utilsResponse.formatResponse(message, success, data, extraData);
 export const formatError = (error: string) => utilsResponse.formatError(error);
 
-export const sortByKey = (list:any[], key:string) => utilsSort.sortByKey(list, key);
+export const sortByKey = (list: any[], key: string) => utilsSort.sortByKey(list, key);
 
 export const validateEmail = (email: string) => utilsValidation.validateEmail(email);
 export const trimStringAndCheckLength = (
