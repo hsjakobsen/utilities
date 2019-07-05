@@ -5,6 +5,7 @@ import * as utilsDate from './date';
 import * as utilsNumber from './numbers';
 import * as utilsParse from './parse';
 import * as utilsResponse from './responses';
+import * as utilsSort from './sort';
 import * as utilsValidation from './validation';
 
 export const asyncForEach = (array: any[], callback: (item: object) => void) =>
@@ -30,6 +31,8 @@ export const getBrowserInfo = (userAgent: string, appName: string, appVersion: s
 export const formatResponse = (message: string, success: boolean, data?: any, extraData?: any) =>
   utilsResponse.formatResponse(message, success, data, extraData);
 export const formatError = (error: string) => utilsResponse.formatError(error);
+
+export const sortByKey = (list:any[], key:string) => utilsSort.sortByKey(list, key);
 
 export const validateEmail = (email: string) => utilsValidation.validateEmail(email);
 export const trimStringAndCheckLength = (
