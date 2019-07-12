@@ -10,16 +10,16 @@ test('Validate email 2', () => {
 
 test('trimStringAndCheckLength', () => {
   expect(trimStringAndCheckLength(' My little pony ', 'Name', 3, false)).toEqual({
-    success: true,
-    result: 'My little pony',
     feedback: '',
+    result: 'My little pony',
+    success: true,
   });
 });
 
 test('verifyLoginCredentials', () => {
   expect(verifyLoginCredentials('', 'test')).toEqual({
-    success: false,
     message: 'Username cannot be empty',
+    success: false,
   });
 });
 
