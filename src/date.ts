@@ -1,4 +1,4 @@
-import moment from 'moment';
+import * as moment from 'moment';
 
 export const dateFormatYMD: string = 'YYYY-MM-DD';
 export const dateFormatDMY: string = 'DD-MM-YYYY';
