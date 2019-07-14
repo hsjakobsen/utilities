@@ -16,6 +16,7 @@ export const compareStrings = (string1: string, string2: string) => utilsCompari
 export const getMonthAndDateFormatted = (date: Date) => utilsDate.monthAndDateFormatted(date);
 export const getTodayDateFormatted = () => utilsDate.getTodayDateFormatted();
 export const getTimestamp = (date: Date) => utilsDate.getTimestamp(date);
+export const getSignUpDateForDatabase = () => utilsDate.getSignUpDateForDatabase();
 export const dateFormatYMD = utilsDate.dateFormatYMD;
 export const dateFormatDMY = utilsDate.dateFormatDMY;
 export const dateFormatMD = utilsDate.dateFormatMD;
