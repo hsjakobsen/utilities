@@ -1,4 +1,4 @@
-import { getMonthAndDateFormatted, getTodayDateFormatted, getTimestamp } from '../index';
+import { getMonthAndDateFormatted, getTimestamp } from '../index';
 
 // MonthAndDateFormatted tests
 test('MonthAndDateFormatted Test 1', () => {
@@ -17,9 +17,9 @@ test('MonthAndDateFormatted Test 2', () => {
 
 // Timestamp tests
 test('TimeStamp Test 1', () => {
-  expect(getTimestamp(new Date(1560848669049))).toBe('11:04:29');
+  expect(getTimestamp("1560848669049")).toBe('11:04:29');
 });
 
 test('TimeStamp Test 2', () => {
-  expect(getTimestamp(new Date(500000000000))).toBe('01:53:20');
+  expect(getTimestamp("500000000000")).toBe('01:53:20');
 });

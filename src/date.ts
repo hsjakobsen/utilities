@@ -13,7 +13,7 @@ export const getTodayDateFormatted = () => {
   return moment(new Date()).format(dateFormatDMY);
 };
 
-export const getTimestamp = (date: Date) => {
+export const getTimestamp = (date: string) => {
   return moment(date).format(timeFormatHMS);
 };
 
