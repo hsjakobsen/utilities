@@ -21,6 +21,7 @@ export const dateFormatYMD = utilsDate.dateFormatYMD;
 export const dateFormatDMY = utilsDate.dateFormatDMY;
 export const dateFormatMD = utilsDate.dateFormatMD;
 export const timeFormatHMS = utilsDate.timeFormatHMS;
+export const verboseDateFormat = utilsDate.verboseDateFormat;
 
 export const numberWithCommas = (numString: string) => utilsNumber.numberWithCommas(numString);
 
