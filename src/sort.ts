@@ -1,4 +1,4 @@
-export function sortByKey(array: any[], key: string, ascending: boolean) {
+export const sortByKey = (array: any[], key: string, ascending: boolean) => {
   return array.sort((a, b) => {
     const x: any = a[key];
     const y: any = b[key];
