@@ -54,7 +54,7 @@ export function verifyLoginCredentials(username: string, password: string): IVer
   }
 
   return {
-    ...formatResponse('Username cannot be empty', true),
+    ...formatResponse('', true),
     password,
     username,
   };
