@@ -19,14 +19,14 @@ test('trimStringAndCheckLength', () => {
 test('verifyLoginCredentials', () => {
   expect(verifyLoginCredentials('', 'test')).toEqual({
     message: 'Username cannot be empty',
-    password: "test",
+    password: 'test',
     success: false,
   });
 });
 
 test('verifyLoginCredentials', () => {
   expect(verifyLoginCredentials('test', 'test')).toEqual({
-    message: "",
+    message: '',
     password: 'test',
     success: true,
     username: 'test',
