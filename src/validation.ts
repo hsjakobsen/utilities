@@ -1,5 +1,5 @@
 import * as validator from 'email-validator';
-import { formatError, IResponse, formatResponse } from './responses';
+import { formatError, formatResponse, IResponse } from './responses';
 
 export const validateEmail = (email: string) => validator.validate(email);
 
