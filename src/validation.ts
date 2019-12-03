@@ -1,6 +1,5 @@
 import * as validator from 'email-validator';
-
-import { formatError } from './responses';
+import { formatError, IResponse, formatResponse } from './responses';
 
 export const validateEmail = (email: string) => validator.validate(email);
 
@@ -33,17 +32,32 @@ export function trimStringAndCheckLength(
   return response;
 }
 
-export function verifyLoginCredentials(username: string, password: string) {
+export interface IVerifiedLoginCredentials extends IResponse {
+  username:string;
+  password:string
+}
+
+export function verifyLoginCredentials(username: string, password: string):IVerifiedLoginCredentials {
+  
   if (!username || username === '') {
-    return formatError('Username cannot be empty');
+    return {
+      ...formatError('Username cannot be empty'), 
+      password,
+      username,
+    };
   }
-  if (!password || password === '') {
-    return formatError('Password cannot be empty');
+  if (!password || password === '') {    
+    return {
+      ...formatError('Username cannot be empty'), 
+      password,
+      username,
+    };
   }
 
   return {
+    ...formatResponse('Username cannot be empty', true),  
     password,
-    success: true,
-    username,
-  };
+    username
+  }
+  
 }
