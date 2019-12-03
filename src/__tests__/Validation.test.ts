@@ -21,6 +21,7 @@ test('verifyLoginCredentials', () => {
     message: 'Username cannot be empty',
     password: 'test',
     success: false,
+    username: "",
   });
 });
 
