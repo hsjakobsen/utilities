@@ -8,4 +8,4 @@ export const sortByKey = (array: any[], key: string, ascending: boolean) => {
     }
     return result;
   });
-}
+};

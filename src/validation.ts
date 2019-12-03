@@ -33,31 +33,29 @@ export function trimStringAndCheckLength(
 }
 
 export interface IVerifiedLoginCredentials extends IResponse {
-  username:string;
-  password:string
+  username: string;
+  password: string;
 }
 
-export function verifyLoginCredentials(username: string, password: string):IVerifiedLoginCredentials {
-  
+export function verifyLoginCredentials(username: string, password: string): IVerifiedLoginCredentials {
   if (!username || username === '') {
     return {
-      ...formatError('Username cannot be empty'), 
+      ...formatError('Username cannot be empty'),
       password,
       username,
     };
   }
-  if (!password || password === '') {    
+  if (!password || password === '') {
     return {
-      ...formatError('Username cannot be empty'), 
+      ...formatError('Username cannot be empty'),
       password,
       username,
     };
   }
 
   return {
-    ...formatResponse('Username cannot be empty', true),  
+    ...formatResponse('Username cannot be empty', true),
     password,
-    username
-  }
-  
+    username,
+  };
 }
