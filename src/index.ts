@@ -8,7 +8,7 @@ import * as utilsResponse from './responses';
 import * as utilsSort from './sort';
 import * as utilsValidation from './validation';
 
-export const asyncForEach = (array: any[], callback: (item: object) => void) =>
+export const asyncForEach = (array: any[], callback: (item: any) => void) =>
   utilsAsync.asyncForEach(array, callback);
 
 export const compareStrings = (string1: string, string2: string) => utilsComparison.compareStrings(string1, string2);
