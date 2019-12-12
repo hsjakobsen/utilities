@@ -7,7 +7,7 @@ export const timeFormatHMS: string = 'HH:mm:ss';
 export const timeFormatHM: string = 'HH:mm';
 export const verboseDateFormat: string = 'MMMM Do YYYY';
 
-export const monthAndDateFormatted = (date: Date) => {
+export const monthAndDateFormatted = (date: string) => {
   return moment(date).format(dateFormatMD);
 };
 

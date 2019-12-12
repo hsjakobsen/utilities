@@ -12,7 +12,7 @@ export const asyncForEach = (array: any[], callback: (item: any) => void) => uti
 
 export const compareStrings = (string1: string, string2: string) => utilsComparison.compareStrings(string1, string2);
 
-export const getMonthAndDateFormatted = (date: Date) => utilsDate.monthAndDateFormatted(date);
+export const getMonthAndDateFormatted = (date: string) => utilsDate.monthAndDateFormatted(date);
 export const getTodayDateFormatted = () => utilsDate.getTodayDateFormatted();
 export const getTimestamp = (date: Date) => utilsDate.getTimestamp(date);
 export const getSignUpDateForDatabase = () => utilsDate.getSignUpDateForDatabase();
