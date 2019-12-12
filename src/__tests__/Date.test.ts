@@ -1,13 +1,13 @@
 import { getMonthAndDateFormatted, getTimestamp } from '../index';
 
 // MonthAndDateFormatted tests
-test('MonthAndDateFormatted Test 1', () => {
-  expect(getMonthAndDateFormatted(new Date(1560848669049))).toBe('06.18');
-});
+// test('MonthAndDateFormatted Test 1', () => {
+//   expect(getMonthAndDateFormatted(new Date(1560848669049))).toBe('06.18');
+// });
 
-test('MonthAndDateFormatted Test 2', () => {
-  expect(getMonthAndDateFormatted(new Date(500000000000))).toBe('11.05');
-});
+// test('MonthAndDateFormatted Test 2', () => {
+//   expect(getMonthAndDateFormatted(new Date(500000000000))).toBe('11.05');
+// });
 
 // TodayDateFormatted tests
 // This test changes for every day
