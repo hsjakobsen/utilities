@@ -1,4 +1,4 @@
-import { compareStrings } from '../index';
+import { compareStrings } from '../comparison';
 
 test('Compare strings 1', () => {
   expect(compareStrings('Carl', 'Carl')).toBe(0);

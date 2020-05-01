@@ -1,4 +1,4 @@
-import { getMonthAndDateFormatted, getTimestamp } from '../index';
+import { getTimestamp } from '../date';
 
 // MonthAndDateFormatted tests
 // test('MonthAndDateFormatted Test 1', () => {

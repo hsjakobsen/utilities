@@ -1,6 +1,6 @@
-import { stringifyAndParse } from '../index';
+import { stringifyAndParse } from '../parse';
 
-var list = [
+const list = [
   {
     id: 3333,
     name: 'test',

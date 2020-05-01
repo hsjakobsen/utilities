@@ -1,4 +1,4 @@
-import { trimStringAndCheckLength, validateEmail, verifyLoginCredentials } from '../index';
+import { trimStringAndCheckLength, validateEmail, verifyLoginCredentials } from '../validation';
 
 test('Validate email 1', () => {
   expect(validateEmail('test@test.com')).toBe(true);

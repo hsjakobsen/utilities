@@ -1,4 +1,4 @@
-import { getBrowserInfo } from '../index';
+import { getBrowserInfo } from '../browser';
 
 test('getBrowserInfo 1', () => {
   expect(
