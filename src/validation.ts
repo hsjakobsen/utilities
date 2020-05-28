@@ -13,12 +13,15 @@ export function trimStringAndCheckLength(
   let response;
 
   const matchesRequirement =
-    matchLength === true ? trimmedString.length !== lengthRequirement : trimmedString.length < lengthRequirement;
+    matchLength === true
+      ? trimmedString.length !== lengthRequirement
+      : trimmedString.length < lengthRequirement;
   const feedback = matchLength === true ? ' ' : ' at least ';
 
   if (matchesRequirement) {
     response = {
-      feedback: field + ' must be' + feedback + lengthRequirement + ' characters.',
+      feedback:
+        field + ' must be' + feedback + lengthRequirement + ' characters.',
       result: trimmedString,
       success: false,
     };
@@ -37,7 +40,10 @@ export interface IVerifiedLoginCredentials extends IResponse {
   password: string;
 }
 
-export function verifyLoginCredentials(username: string, password: string): IVerifiedLoginCredentials {
+export function verifyLoginCredentials(
+  username: string,
+  password: string,
+): IVerifiedLoginCredentials {
   if (!username || username === '') {
     return {
       ...formatError('Username cannot be empty'),

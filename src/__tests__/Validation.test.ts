@@ -1,4 +1,8 @@
-import { trimStringAndCheckLength, validateEmail, verifyLoginCredentials } from '../validation';
+import {
+  trimStringAndCheckLength,
+  validateEmail,
+  verifyLoginCredentials,
+} from '../validation';
 
 test('Validate email 1', () => {
   expect(validateEmail('test@test.com')).toBe(true);
@@ -9,7 +13,9 @@ test('Validate email 2', () => {
 });
 
 test('trimStringAndCheckLength', () => {
-  expect(trimStringAndCheckLength(' My little pony ', 'Name', 3, false)).toEqual({
+  expect(
+    trimStringAndCheckLength(' My little pony ', 'Name', 3, false),
+  ).toEqual({
     feedback: '',
     result: 'My little pony',
     success: true,

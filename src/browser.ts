@@ -1,6 +1,13 @@
-export function getBrowserInfo(userAgent: string, appName: string, appVersion: string) {
+export function getBrowserInfo(
+  userAgent: string,
+  appName: string,
+  appVersion: string,
+) {
   let tem;
-  let M = userAgent.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+  let M =
+    userAgent.match(
+      /(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i,
+    ) || [];
   if (/trident/i.test(M[1])) {
     tem = /\brv[ :]+(\d+)/g.exec(userAgent) || [];
     return { name: 'IE ', version: tem[1] || '' };

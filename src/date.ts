@@ -1,11 +1,11 @@
 import * as moment from 'moment';
 
-export const dateFormatYMD: string = 'YYYY-MM-DD';
-export const dateFormatDMY: string = 'DD-MM-YYYY';
-export const dateFormatMD: string = 'MM.DD';
-export const timeFormatHMS: string = 'HH:mm:ss';
-export const timeFormatHM: string = 'HH:mm';
-export const verboseDateFormat: string = 'MMMM Do YYYY';
+export const dateFormatYMD = 'YYYY-MM-DD';
+export const dateFormatDMY = 'DD-MM-YYYY';
+export const dateFormatMD = 'MM.DD';
+export const timeFormatHMS = 'HH:mm:ss';
+export const timeFormatHM = 'HH:mm';
+export const verboseDateFormat = 'MMMM Do YYYY';
 
 export const monthAndDateFormatted = (date: string) => {
   return moment(date).format(dateFormatMD);
