@@ -1,11 +1,14 @@
 export const sortByKey = (array: any[], key: string, ascending: boolean): any[] => {
   return array.sort((a, b) => {
-    const x: string = a[key] as string;
-    const y: string = b[key] as string;
-    const xLowerCased = x.toLowerCase();
-    const yLowerCased = y.toLowerCase();
+    let x: string = a[key] as string;
+    let y: string = b[key] as string;
 
-    let result: number = xLowerCased < yLowerCased ? -1 : xLowerCased > yLowerCased ? 1 : 0;
+    if (typeof x === 'string') {
+      x = x.toLowerCase();
+      y = y.toLowerCase();
+    }
+
+    let result: number = x < y ? -1 : x > y ? 1 : 0;
     if (!ascending) {
       result = result * -1;
     }
