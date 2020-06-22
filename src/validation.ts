@@ -1,16 +1,22 @@
 import * as validator from 'email-validator';
 import { formatError, formatResponse, IResponse } from './responses';
 
-export const validateEmail = (email: string) => validator.validate(email);
+export const validateEmail = (email: string): boolean => validator.validate(email);
+
+interface ITrimStringResponse {
+  feedback: string;
+  result: string;
+  success: boolean;
+}
 
 export function trimStringAndCheckLength(
   stringToCheck: string,
   field: string,
   lengthRequirement: number,
   matchLength: boolean,
-) {
+): ITrimStringResponse {
   const trimmedString = stringToCheck.trim();
-  let response;
+  let response: ITrimStringResponse;
 
   const matchesRequirement =
     matchLength === true ? trimmedString.length !== lengthRequirement : trimmedString.length < lengthRequirement;

@@ -1,4 +1,4 @@
-export function formatResponse(message: string, success: boolean, data?: any, extraData?: any) {
+export function formatResponse(message: string, success: boolean, data?: any, extraData?: any): IResponse {
   const response: IResponse = {
     data,
     extraData,
@@ -9,7 +9,7 @@ export function formatResponse(message: string, success: boolean, data?: any, ex
   return response;
 }
 
-export function formatError(error: string) {
+export function formatError(error: string): IResponse {
   const response: IResponse = {
     message: error,
     success: false,
