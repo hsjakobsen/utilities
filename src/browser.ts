@@ -1,4 +1,9 @@
-export const getBrowserInfo = (userAgent: string, appName: string, appVersion: string) => {
+interface IBrowserInfo {
+  name: string;
+  version: string;
+}
+
+export const getBrowserInfo = (userAgent: string, appName: string, appVersion: string): IBrowserInfo => {
   let tem;
   let M = userAgent.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
   if (/trident/i.test(M[1])) {
