@@ -1,4 +1,4 @@
-import * as moment from 'moment';
+import dayjs from 'dayjs';
 
 export const dateFormatYMD = 'YYYY-MM-DD';
 export const dateFormatDMY = 'DD-MM-YYYY';
@@ -8,17 +8,17 @@ export const timeFormatHM = 'HH:mm';
 export const verboseDateFormat = 'MMMM Do YYYY';
 
 export const monthAndDateFormatted = (date: string): string => {
-  return moment(date).format(dateFormatMD);
+  return dayjs(date).format(dateFormatMD);
 };
 
 export const getTodayDateFormatted = (): string => {
-  return moment(new Date()).format(dateFormatDMY);
+  return dayjs(new Date()).format(dateFormatDMY);
 };
 
 export const getTimestamp = (date: Date): string => {
-  return moment(date).format(timeFormatHMS);
+  return dayjs(date).format(timeFormatHMS);
 };
 
 export const getSignUpDateForDatabase = (): string => {
-  return moment(new Date()).format(dateFormatYMD + ' ' + timeFormatHMS);
+  return dayjs(new Date()).format(dateFormatYMD + ' ' + timeFormatHMS);
 };
