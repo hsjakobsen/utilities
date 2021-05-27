@@ -1,6 +1,6 @@
 {
   "name": "@hsjakobsen/utilities",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "A bunch of utility functions that I use across various projects",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
